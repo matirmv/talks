@@ -1,6 +1,22 @@
-.rectangle {
+p.rectangle {
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+p.rectangle.long {
+  height: 200px;
+}
+
+.text-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  display: flex;
+  align-items: center;
+}
+.long{
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
