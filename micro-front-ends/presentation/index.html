@@ -10,8 +10,15 @@
     <title>reveal.js</title>
 
     <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/reveal.css" />
     <link rel="stylesheet" href="css/theme/black.css" />
+    <link rel="stylesheet" href="css/custom.css" />
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/monokai.css" />
@@ -47,14 +54,70 @@
         </section>
 
         <!-- SLIDE1 -->
-        <section>
+        <section data-background-image="./assets/images/mamouth.gif">
           <h2>
             Du monolithique au microlithique
           </h2>
-          <section></section>
-          <section></section>
-          <section></section>
         </section>
+
+        <section>
+          <section>
+            <h3>Le Monolithe</h3>
+            <div class="row">
+              <div
+                class="d-flex justify-content-center align-items-center flex-column w-100"
+              >
+                <p class="fragment fade-in bg-primary m-0 w-50 rectangle">
+                  Front End
+                </p>
+                <p class="fragment fade-up bg-secondary m-0 w-50 rectangle ">
+                  Back End
+                </p>
+                <p class="fragment fade-down bg-secondary m-0 w-50 rectangle">
+                  Data Base
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section data-background-image="./assets/images/rupture.gif">
+            <h3>La séparation du front et du back</h3>
+            <div class="row">
+              <div
+                class="d-flex justify-content-center align-items-center flex-column w-100"
+              >
+                <p class="fragment fade-up bg-primary m-0 w-50 rectangle mb-5">
+                  Front End
+                </p>
+                <p class=" bg-secondary m-0 w-50 rectangle ">
+                  Back End
+                </p>
+                <p class=" bg-secondary m-0 w-50 rectangle">
+                  Data Base
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h3>
+              l'arrivée des micros services côté back
+            </h3>
+          </section>
+          <section>
+            <h3>
+              l'idée de créer des micro fronts ends
+            </h3>
+          </section>
+          <section>
+            <h3>
+              Pour quelles applications ?
+            </h3>
+          </section>
+		</section>
+		
+
+
 
         <!-- SLIDE2 -->
         <section>
