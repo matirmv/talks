@@ -1,50 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- SLIDE0 -->
+        <section>
+          <h1>Les Micros Front Ends</h1>
+          <ol>
+            <li class="fragment fade-in-then-semi-out">
+              Du monolithique au microlithique
+            </li>
+            <li class="fragment fade-in-then-semi-out">
+              les Web Components à la rescousse
+            </li>
+            <li class="fragment fade-in-then-semi-out">
+              Exemple de WC avec Angular et Vue
+            </li>
+          </ol>
+        </section>
 
-		<script src="js/reveal.js"></script>
+        <!-- SLIDE1 -->
+        <section>
+          <h2>
+            Du monolithique au microlithique
+          </h2>
+          <section></section>
+          <section></section>
+          <section></section>
+        </section>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+        <!-- SLIDE2 -->
+        <section>
+          <h2>
+            Du monolithique au microlithique
+          </h2>
+          <section></section>
+          <section></section>
+          <section></section>
+        </section>
+
+        <!-- SLIDE2 -->
+        <section>
+          <h2>
+            Du monolithique au microlithique
+          </h2>
+          <section></section>
+          <section></section>
+          <section></section>
+        </section>
+
+        <!-- <p class="fragment grow">grow</p>
+		<p class="fragment shrink">shrink</p>
+		<p class="fragment fade-out">fade-out</p>
+		<p class="fragment fade-up">fade-up (also down, left and right!)</p>
+		<p class="fragment fade-in-then-out">
+		  fades in, then out when we move to the next step
+		</p>
+		<p class="fragment fade-in-then-semi-out">
+		  fades in, then obfuscate when we move to the next step
+		</p>
+		<p class="fragment highlight-current-blue">blue only once</p>
+		<p class="fragment highlight-red">highlight-red</p>
+		<p class="fragment highlight-green">highlight-green</p>
+		<p class="fragment highlight-blue">highlight-blue</p> -->
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        hash: true,
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/highlight/highlight.js" },
+          { src: "plugin/notes/notes.js", async: true }
+        ]
+      });
+    </script>
+  </body>
 </html>
