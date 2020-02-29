@@ -79,6 +79,28 @@
                 </p>
               </div>
             </div>
+            <aside class="notes">
+              <p>plus :</p>
+              <ol>
+                <li>facile à deployer, un seul fichier/repertoire à push</li>
+                <li>
+                  facile à tester et à débugguer, tout est au même endroit.
+                  Tests end to end facilités également.
+                </li>
+                <li>
+                  moins de problèmes à gérer sur l'ensemble de l'application,
+                  tous les problème concernent le même code (caching...)
+                </li>
+              </ol>
+              <p>moins :</p>
+              <ol>
+                <li>
+                  Faire des évolutions est compliqué : tout est interconnecté
+                </li>
+                <li>Scalabilité</li>
+                <li>Fermé au test de nouvelles techs, on doit tout réécrire</li>
+              </ol>
+            </aside>
           </section>
 
           <section data-background-image="./assets/images/rupture.gif">
@@ -130,6 +152,32 @@
                 </div>
               </div>
             </div>
+
+            <aside class="notes">
+              <p>Plus</p>
+              <ol>
+                <li>
+                  Flexibilité, ajouter des services et des feature plus
+                  facilement, indépendement
+                </li>
+                <li>
+                  Scalabilité, Scale each component independently without
+                  worrying about reaching a ceiling.
+                </li>
+                <li>
+                  Agilité augmentée, Any issues found in the microservices
+                  architecture will only affect one service instead of the
+                  entire app. This means that any new changes that you implement
+                  will involve less risk.
+                </li>
+              </ol>
+              <p>Moins</p>
+              <ol>
+                <li>More complex - In a distributed system, you have to create the connection between all databases and modules, </li>
+                <li>Testing - Since the microservices architecture consists of several components each of which can be deployed separately, testing becomes much more difficult. </li>
+                <li> Cross-cutting concerns - These issues include externalized configuration, logging and other issues. </li>
+              </ol>
+            </aside>
           </section>
           <section>
             <h3>
@@ -140,29 +188,43 @@
                 class="d-flex justify-content-center align-items-center flex-column w-100"
               >
                 <div class="d-flex w-70 ">
-                  <div
-                    class="fragment col fade-up m-2 p-4 bg-primary long"
-                  >
+                  <div class="fragment col fade-up m-2 p-4 bg-primary long">
                     Team Payment
                   </div>
-                  <div
-                    class="fragment col fade-up m-2 p-4 bg-primary long"
-                  >
+                  <div class="fragment col fade-up m-2 p-4 bg-primary long">
                     Team Product
                   </div>
-                  <div
-                    class="fragment col fade-up m-2 p-4 bg-primary long"
-                  >
+                  <div class="fragment col fade-up m-2 p-4 bg-primary long">
                     Team Cart
                   </div>
                 </div>
               </div>
             </div>
+            <aside class="notes">
+              <p>Les plus :</p>
+              <ol>
+                <li>Separate deploys for separate services</li>
+                <li>Ability of autonomous teams to independently iterate and innovate</li>
+                <li>Ability to organize teams around business units or products</li>
+              </ol>
+
+              
+              <p>Les moins :</p>
+              <ol>
+                <li>Needing to have many different applications running in development to test a complete experience</li>
+                <li>Tracking and debug problems across the entire system</li>
+                <li>Dealing with versioning across the system</li>
+                <li>With each team making their own technology choices, browsers may end up downloading multiple frameworks & duplicate code</li>
+                <li>Users don’t experience your company or product in isolation. This is one of the arguments against completely scoping styles to component - the problem may be even worse with completely separated teams.</li>
+                <li>Some of the implementations of microfrontends (particularly looking at embedding iframes) can cause huge accessibility challenges.</li>
+              </ol>
+            </aside>
           </section>
-          <section>
+          <section data-background-image="./assets/images/who.gif"> 
             <h3>
               Pour quelles applications ?
             </h3>
+
           </section>
         </section>
 
