@@ -8530,12 +8530,12 @@ function normalizeComponent (
   }
 }
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b7664c36-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/AlphaCart.vue?vue&type=template&id=ebcd3834&shadow
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',[_vm._v(_vm._s(_vm.msg))])])}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b7664c36-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/AlphaCart.vue?vue&type=template&id=04914273&shadow
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',[_vm._v("Quantité total d'articles : "+_vm._s(_vm.quantite))])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/AlphaCart.vue?vue&type=template&id=ebcd3834&shadow
+// CONCATENATED MODULE: ./src/components/AlphaCart.vue?vue&type=template&id=04914273&shadow
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/AlphaCart.vue?vue&type=script&lang=js&shadow
 //
@@ -8544,7 +8544,7 @@ var staticRenderFns = []
 //
 //
 /* harmony default export */ var AlphaCartvue_type_script_lang_js_shadow = ({
-  props: ['msg']
+  props: ['quantite']
 });
 // CONCATENATED MODULE: ./src/components/AlphaCart.vue?vue&type=script&lang=js&shadow
  /* harmony default export */ var components_AlphaCartvue_type_script_lang_js_shadow = (AlphaCartvue_type_script_lang_js_shadow); 

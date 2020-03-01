@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div>{{ msg }}</div>
+    <div>Quantité total d'articles : {{ quantite }}</div>
   </div>
 </template>
 <script>
   export default {
-    props: ['msg'] 
+    props: ['quantite'] 
   }
 </script>
