@@ -23,14 +23,15 @@ class AlphaBuy extends HTMLElement {
   }
 
   addToCart() {
-    console.log('triggered');
-    
     const boardBrand = this.getAttribute("board-brand");
     const price = prices[boardBrand];
-    
+
     this.dispatchEvent(
       new CustomEvent("alpha:buy:changed", {
-        bubbles: true
+        bubbles: true,
+        detail: {
+          price: price
+        }
       })
     );
   }

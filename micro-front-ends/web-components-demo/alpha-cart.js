@@ -5,7 +5,7 @@ const state = {
 class AlphaCart extends HTMLElement {
 
   connectedCallback() {
-    this.refresh = this.refresh.bind(this);
+      this.refresh = this.refresh.bind(this);
     this.render();
     window.addEventListener("alpha:buy:changed", this.refresh);
   }
@@ -15,7 +15,6 @@ class AlphaCart extends HTMLElement {
   }
 
   render() {
-    // const total = cartProducts.reduce((acc, curr) => acc + curr, 0);
     this.innerHTML = `<button type="button">${state.count} article${
       state.count > 0 ? "s" : ""
     } in the basket</button>`;
