@@ -84,11 +84,10 @@
               <ol>
                 <li>facile à deployer, un seul fichier/repertoire à push</li>
                 <li>
-                  facile à tester et à débugguer, tout est au même endroit.
-                  Tests end to end facilités également.
+                  facile à tester et à débugguer (tout est centralisé). Tests
+                  end to end facilités également.
                 </li>
                 <li>
-                  moins de problèmes à gérer sur l'ensemble de l'application,
                   tous les problème concernent le même code (caching...)
                 </li>
               </ol>
@@ -161,26 +160,25 @@
                   facilement, indépendement
                 </li>
                 <li>
-                  Scalabilité, Scale each component independently without
-                  worrying about reaching a ceiling.
+                  Scalabilité, mettre à l'échelle les composants indépendement
+                  sans se soucier de pb de plafond.
                 </li>
                 <li>
-                  Agilité augmentée, Any issues found in the microservices
-                  architecture will only affect one service instead of the
-                  entire app. This means that any new changes that you implement
-                  will involve less risk.
+                  Agilité augmentée, si un pb survient, il ne touche qu'un seul
+                  service isolé des autresAny issues found in the microservices.
+                  Toute évolution implique moins de risques
                 </li>
               </ol>
               <p>Moins</p>
               <ol>
                 <li>
-                  More complex - In a distributed system, you have to create the
-                  connection between all databases and modules,
+                  Plus complexe à gérer, il faut s'assurer de la communication
+                  entre les différentes bases et modules
                 </li>
                 <li>
-                  Testing - Since the microservices architecture consists of
-                  several components each of which can be deployed separately,
-                  testing becomes much more difficult.
+                  Testing - Chaque microservice est deployé de manière
+                  indépendante, c'esrt donc moins facile de faire des tests que
+                  sur du code centralisé
                 </li>
                 <li>
                   Cross-cutting concerns - These issues include externalized
@@ -213,38 +211,26 @@
             <aside class="notes">
               <p>Les plus :</p>
               <ol>
-                <li>Separate deploys for separate services</li>
+                <li>les déploiements sont indépendants pour chaque team</li>
                 <li>
-                  Ability of autonomous teams to independently iterate and
-                  innovate
-                </li>
-                <li>
-                  Ability to organize teams around business units or products
+                  Chaque équipe est autonome et est libre de déployer ses
+                  composants
                 </li>
               </ol>
 
               <p>Les moins :</p>
               <ol>
                 <li>
-                  Needing to have many different applications running in
-                  development to test a complete experience
+                  Il faut faire tourner toutes les applications simultanément en
+                  mode développement pour pouvoir tester entièrement le produit
                 </li>
-                <li>Tracking and debug problems across the entire system</li>
-                <li>Dealing with versioning across the system</li>
+                <li>Le débug devient compliqué</li>
                 <li>
-                  With each team making their own technology choices, browsers
-                  may end up downloading multiple frameworks & duplicate code
-                </li>
-                <li>
-                  Users don’t experience your company or product in isolation.
-                  This is one of the arguments against completely scoping styles
-                  to component - the problem may be even worse with completely
-                  separated teams.
+                  Si plusieurs teams sur le même framework, duplication de code
+                  téléchargé
                 </li>
                 <li>
-                  Some of the implementations of microfrontends (particularly
-                  looking at embedding iframes) can cause huge accessibility
-                  challenges.
+                  Design system imperatif
                 </li>
               </ol>
             </aside>
@@ -256,11 +242,14 @@
           </section>
         </section>
 
-        <!-- SLIDE2 -->
-        <section>
+        <!-- Partie 2 -->
+        <section data-background-image="./assets/images/rescousse.gif">
           <h2>
             les Web Components à la rescousse
           </h2>
+        </section>
+
+        <section>
           <section>
             <h3>c'est quoi ?</h3>
 
@@ -307,22 +296,54 @@
               </p>
             </aside>
           </section>
+
           <section>
-              <h3>Création d'un web component</h3>
+            <h3>Création d'un web component</h3>
+
+            <pre><code class="hljs" data-line-numbers="4,8-11">
+  const state = {
+    count: 0
+  };
+  
+  class AlphaCart extends HTMLElement {
+    connectedCallback() {
+      this.refresh = this.refresh.bind(this);
+      this.render();
+      window.addEventListener("alpha:buy:changed", this.refresh);
+    }
+  
+    disconnectedCallback() {
+      window.removeEventListener("alpha:buy:changed", this.refresh);
+    }
+  
+    render() {
+      this.innerHTML = `<p>${state.count} article${
+        state.count > 0 ? "s" : ""
+      } in the basket</p>`;
+    }
+    refresh() {
+      state.count++;
+      this.render();
+    }
+  }
+  
+  window.customElements.define("alpha-cart", AlphaCart);
+                
+                </code></pre>
           </section>
-          <section></section>
         </section>
 
-        <!-- SLIDE2 -->
+        <!-- Partie 3 -->
         <section>
           <h2>
             Application avec Angular et Vue
           </h2>
-          <section></section>
-          <section></section>
-          <section></section>
         </section>
 
+        <!-- Remerciements -->
+        <section data-background-image="./assets/images/clap.gif">
+          <h1>Merci 💙</h1>
+        </section>
         <!-- <p class="fragment grow">grow</p>
 		<p class="fragment shrink">shrink</p>
 		<p class="fragment fade-out">fade-out</p>

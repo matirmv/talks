@@ -3,9 +3,8 @@ const state = {
 };
 
 class AlphaCart extends HTMLElement {
-
   connectedCallback() {
-      this.refresh = this.refresh.bind(this);
+    this.refresh = this.refresh.bind(this);
     this.render();
     window.addEventListener("alpha:buy:changed", this.refresh);
   }
@@ -15,9 +14,9 @@ class AlphaCart extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = `<button type="button">${state.count} article${
+    this.innerHTML = `<p>${state.count} article${
       state.count > 0 ? "s" : ""
-    } in the basket</button>`;
+    } in the basket</p>`;
   }
   refresh() {
     state.count++;

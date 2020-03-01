@@ -5,9 +5,6 @@ const prices = {
 };
 
 class AlphaBuy extends HTMLElement {
-  static get observedAttributes() {
-    return ["board-brand"];
-  }
   attributeChangedCallback(attr, oldValue, newValue) {
     this.render();
   }
@@ -23,15 +20,9 @@ class AlphaBuy extends HTMLElement {
   }
 
   addToCart() {
-    const boardBrand = this.getAttribute("board-brand");
-    const price = prices[boardBrand];
-
     this.dispatchEvent(
       new CustomEvent("alpha:buy:changed", {
-        bubbles: true,
-        detail: {
-          price: price
-        }
+        bubbles: true
       })
     );
   }
@@ -39,10 +30,13 @@ class AlphaBuy extends HTMLElement {
   render() {
     const boardBrand = this.getAttribute("board-brand");
     const price = prices[boardBrand];
-    this.innerHTML = `<button type="button">buy board ${boardBrand.replace(
-      "b_",
-      ""
+    this.innerHTML = `<button type="button">buy board ${this.formatBrandName(
+      boardBrand
     )} : ${price}</button>`;
+  }
+
+  formatBrandName(name) {
+    return name.replace("b_", "");
   }
 }
 
