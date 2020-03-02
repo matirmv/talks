@@ -1,26 +1,24 @@
-const state = {
-  count: 0
-};
-
 class AlphaCart extends HTMLElement {
+  static get observedAttributes() {
+    return ["count"];
+  }
   connectedCallback() {
-    this.refresh = this.refresh.bind(this);
+    this.setAttribute("count", 0);
     this.render();
-    window.addEventListener("alpha:buy:changed", this.refresh);
   }
 
-  disconnectedCallback() {
-    window.removeEventListener("alpha:buy:changed", this.refresh);
+  attributeChangedCallback(attr, oldValue, newValue) {
+    this.render();
   }
+
+  disconnectedCallback() {}
 
   render() {
-    this.innerHTML = `<p>${state.count} article${
-      state.count > 0 ? "s" : ""
+    console.log("rerendered !");
+
+    this.innerHTML = `<p>${this.getAttribute("count")} article${
+      this.getAttribute("count") > 0 ? "s" : ""
     } in the basket</p>`;
-  }
-  refresh() {
-    state.count++;
-    this.render();
   }
 }
 
